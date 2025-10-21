@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Winflix</title>
+    <link rel="stylesheet" href="" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <img src="image/logo-netflix.png" alt="Logo Netflix" class="logo" />
+      <select name="langue" id="selection-langue" class="selection-langue">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr" selected>Français</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+        <option value="ru">Русский</option>
+      </select>
+      <button class="bouton-connexion">S'identifier</button>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main>
+      <!-- Section Accueil -->
+      <section class="accueil">
+        <h1>Films et séries, en illimité, et bien plus</h1>
+        <h2>
+          À partir de 7,99€ par mois, Netflix vous offre une expérience de
+          streaming de qualité et une sélection de films et de séries de tous
+          les genres.
+        </h2>
+        <p>
+          Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous
+          abonner ou réactiver votre abonnement.
+        </p>
+        <form
+          action="https://www.netflix.com/Login"
+          method="post"
+          class="formulaire"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Adresse e-mail"
+            required
+          />
+          <input type="submit" value="Commencer" />
+        </form>
+      </section>
+
+      <!-- Section Infos -->
+      <section class="infos">
+        <img
+          src="image/logo2.png"
+          alt="Logo Netflix secondaire"
+          width="50"
+          height="50"
+        />
+        <h2>Le Netflix que vous aimez pour juste 7,99 €</h2>
+        <p>Profitez de notre offre avec pub, la plus économique.</p>
+        <button class="bouton">En savoir plus</button>
+      </section>
+
+      <!-- Section Tendances -->
+      <section class="tendances">
+        <h2>Tendances actuelles</h2>
+        <div class="films-liste">
+          <article class="film">
+            <a href="une-bataille.html">
+              <img
+                src="image/Screenshot 2025-10-20 at 21-53-48 Une bataille après l'autre (2025).png"
+                alt="Une bataille après l'autre (2025)"
+              />
+            </a>
+            <h3 class="titre">Une bataille après l'autre (2025)</h3>
+          </article>
+
+          <article class="film">
+            <a href="matrix.html">
+              <img
+                src="image/Screenshot 2025-10-20 at 21-56-46 Matrix (1999).png"
+                alt="Matrix (1999)"
+              />
+            </a>
+            <h3 class="titre">Matrix (1999)</h3>
+          </article>
+
+          <article class="film">
+            <a href="les-affranchis.html">
+              <img
+                src="image/Screenshot 2025-10-20 at 21-58-37 Les Affranchis (1990).png"
+                alt="Les Affranchis (1990)"
+              />
+            </a>
+            <h3 class="titre">Les Affranchis (1990)</h3>
+          </article>
+
+          <article class="film">
+            <a href="la-ligne-verte.html">
+              <img
+                src="image/Screenshot 2025-10-20 at 22-01-05 La Ligne verte (1999).png"
+                alt="La Ligne verte (1999)"
+              />
+            </a>
+            <h3 class="titre">La Ligne verte (1999)</h3>
+          </article>
+
+          <article class="film">
+            <a href="walle.html">
+              <img
+                src="image/Screenshot 2025-10-20 at 22-03-01 WALL·E (2008).png"
+                alt="WALL·E (2008)"
+              />
+            </a>
+            <h3 class="titre">WALL·E (2008)</h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section Avantages -->
+      <section class="infos">
+        <h3>Encore plus de raisons de vous abonner</h3>
+        <article class="regarder">
+          <h3>Regardez Netflix sur votre TV</h3>
+          <p>
+            Regardez Netflix sur votre Smart TV, PlayStation, Xbox, Chromecast,
+            Apple TV, lecteur Blu-ray et bien plus.
+          </p>
+        </article>
+        <article class="abonnement">
+          <h3>Téléchargez vos séries pour les regarder hors connexion</h3>
+          <p>
+            Enregistrez vos programmes préférés et ayez toujours quelque chose à
+            regarder.
+          </p>
+        </article>
+        <article class="enfant">
+          <h3>Créez des profils pour les enfants</h3>
+          <p>
+            Les enfants découvrent de nouvelles aventures et retrouvent leurs
+            personnages préférés dans un espace bien à eux, déjà inclus dans
+            votre abonnement.
+          </p>
+        </article>
+        <article class="politique">
+          <h3>En savoir plus</h3>
+          <p>Découvrez Netflix et ses offres pour les plus grands publics.</p>
+        </article>
+      </section>
+
+      <!-- Section FAQ -->
+      <section class="questions-frequentes">
+        <h3>Foire aux questions</h3>
+
+        <article class="question-item">
+          <button class="question">Qu'est-ce que Netflix ?</button>
+          <p class="reponse">
+            Netflix est un service de streaming proposant films et séries sur
+            tous vos appareils.
+          </p>
+        </article>
+
+        <article class="question-item">
+          <button class="question">Combien coûte Netflix ?</button>
+          <p class="reponse">
+            Les forfaits commencent à 7,99 € par mois. Vous pouvez annuler à
+            tout moment.
+          </p>
+        </article>
+
+        <article class="question-item">
+          <button class="question">
+            Comment puis-je annuler mon abonnement ?
+          </button>
+          <p class="reponse">
+            Vous pouvez annuler votre abonnement directement depuis votre compte
+            en ligne.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Beweb</p>
+      <p>Site web créé par Beweb</p>
+    </footer>
+  </body>
+</html>
