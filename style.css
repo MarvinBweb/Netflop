@@ -7,8 +7,8 @@
 }
 
 body {
-  background-color: #0a0f0a; /* fond sombre presque noir */
-  color: #ccc; /* texte gris clair */
+  background-color: #0a0f0a;
+  color: #ccc;
   line-height: 1.6;
 }
 
@@ -19,12 +19,12 @@ a {
 
 /* ===== HEADER ===== */
 header {
-  background-color: #111312; /* sombre */
+  background-color: #111312;
   padding: 15px 30px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 2px solid #1abc9c; /* vert discret */
+  border-bottom: 2px solid #1abc9c;
 }
 
 header nav ul {
@@ -41,20 +41,20 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: #1abc9c; /* vert accent discret */
+  color: #1abc9c;
 }
 
-/* ===== PLANS ===== */
+/* ===== SECTION PRICING ===== */
 .pricing {
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 50px 20px;
   flex-wrap: wrap;
+  padding: 50px 20px;
 }
 
 .plan {
-  background-color: #121515; /* sombre */
+  background-color: #121515;
   padding: 25px;
   border-radius: 12px;
   width: 250px;
@@ -76,7 +76,7 @@ header nav ul li a:hover {
 .price {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #16a085; /* vert plus doux */
+  color: #16a085;
 }
 
 .plan ul {
@@ -102,39 +102,50 @@ header nav ul li a:hover {
   box-shadow: 0 0 10px #1abc9c;
 }
 
-/* ===== SECTIONS ===== */
-section h2 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 12px 20px;
-  border-radius: 12px;
-  text-align: left;
-  font-size: 1.6rem;
-  font-weight: bold;
-  width: fit-content;
+/* ===== SECTIONS AVEC TITRES ===== */
+section:not(.pricing) {
+  display: flex;
+  flex-direction: column; /* titre au-dessus */
+  align-items: center;
+  padding: 30px 0;
+}
+
+/* Couleurs de fond */
+#films,
+#concert {
+  background-color: #111312; /* première et dernière section */
+}
+
+#series,
+#documentaires,
+#mangas,
+#animes,
+#show {
+  background-color: #1a1a1a; /* sections du milieu */
+}
+
+/* Titres des sections */
+section:not(.pricing) h2 {
   display: inline-block;
-  color: #fff; /* texte blanc */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  margin-bottom: 20px;
+  padding: 12px 25px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #b87aff; /* violet */
+  border: 3px solid #1abc9c; /* contour vert */
+  border-radius: 15px;
+  background-color: transparent;
+  box-shadow: 0 0 12px rgba(26, 188, 156, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Alternance violet / vert avec transparence */
-section h2:nth-of-type(odd) {
-  background-color: rgba(96, 26, 188, 0.8); /* violet semi-transparent */
-}
-
-section h2:nth-of-type(even) {
-  background-color: rgba(0, 176, 80, 0.8); /* vert semi-transparent */
-}
-
-/* Effet au survol */
-section h2:hover {
+section:not(.pricing) h2:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-  filter: brightness(1.2);
+  box-shadow: 0 0 20px rgba(26, 188, 156, 0.8);
   cursor: pointer;
 }
 
-/* Conteneur global des cartes */
+/* ===== CONTENEUR DE CARTES ===== */
 #films-container,
 #series-container,
 #documentaires-container,
@@ -142,16 +153,17 @@ section h2:hover {
 #animes-container,
 #show-container,
 #concert-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; /* cartes en ligne */
+  flex-wrap: wrap; /* passage à la ligne si écran petit */
+  justify-content: center; /* centre les cartes sous le titre */
   gap: 20px;
-  justify-content: center;
-  padding: 20px;
+  width: 100%;
+  padding: 20px 0;
 }
 
-/* Style des cartes jaquette */
+/* ===== CARTES ===== */
 .card {
-  width: 180px;
+  width: 180px; /* permet plusieurs cartes sur une ligne */
   background-color: #1b1b1b;
   color: #e0e0e0;
   border-radius: 8px;
@@ -167,7 +179,6 @@ section h2:hover {
   box-shadow: 0 10px 20px rgba(96, 13, 197, 0.4);
 }
 
-/* Image jaquette */
 .card img {
   width: 100%;
   height: 270px;
@@ -175,7 +186,6 @@ section h2:hover {
   display: block;
 }
 
-/* Titre sous la jaquette */
 .card-info {
   padding: 10px;
 }
@@ -183,31 +193,7 @@ section h2:hover {
 .card-info h3 {
   font-size: 1rem;
   margin: 8px 0;
-  color: #a8ff60; /* couleur du titre */
-}
-
-/* Optionnel : cacher tout le reste des infos */
-.card-info p,
-.resume-container {
-  display: none;
-}
-
-.resume-container {
-  margin-top: 10px;
-  color: #aaa;
-}
-
-/* ===== CONTAINER FLEX ===== */
-#films-container,
-#series-container,
-#documentaires-container,
-#mangas-container,
-#animes-container,
-#show-container,
-#concert-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  color: #a8ff60;
 }
 
 /* ===== FOOTER ===== */
@@ -221,19 +207,14 @@ footer {
   color: #777;
 }
 
-/* ===== MEDIA QUERIES ===== */
+/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 768px) {
   .pricing {
-    flex-direction: column;
+    flex-direction: column; /* empile les plans sur mobile */
     align-items: center;
   }
 
   .card {
-    width: 90%;
-  }
-  :root {
-    --violet: rgba(96, 26, 188, 0.8);
-    --vert: rgba(0, 176, 80, 0.8);
-    --accent: #1abc9c;
+    width: 90%; /* cartes prennent plus de place sur mobile */
   }
 }
